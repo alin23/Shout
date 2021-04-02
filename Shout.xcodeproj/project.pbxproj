@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"Shout::ShoutPackageTests::ProductTarget" /* ShoutPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_70 /* Build configuration list for PBXAggregateTarget "ShoutPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_73 /* PBXTargetDependency */,
+			);
+			name = ShoutPackageTests;
+			productName = ShoutPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		C723C5812617B9440033565F /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = C723C5802617B9440033565F /* Socket */; };
+		C74724302617B2BB00E1BA4A /* libssh2_publickey.h in Headers */ = {isa = PBXBuildFile; fileRef = C747242D2617B2BB00E1BA4A /* libssh2_publickey.h */; };
+		C74724312617B2BB00E1BA4A /* libssh2_sftp.h in Headers */ = {isa = PBXBuildFile; fileRef = C747242E2617B2BB00E1BA4A /* libssh2_sftp.h */; };
+		C74724322617B2BB00E1BA4A /* libssh2.h in Headers */ = {isa = PBXBuildFile; fileRef = C747242F2617B2BB00E1BA4A /* libssh2.h */; };
+		C7DD7D062617A1C400B07B31 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* libcrypto.a */; };
+		C7DD7D072617A1C400B07B31 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* libssh2.a */; };
+		C7DD7D082617A1C400B07B31 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* libssl.a */; };
+		C7DD7D102617A1EF00B07B31 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD7D0F2617A1EF00B07B31 /* libz.tbd */; };
+		OBJ_48 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Agent.swift */; };
+		OBJ_49 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Channel.swift */; };
+		OBJ_50 /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* FileAttributes.swift */; };
+		OBJ_51 /* FilePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* FilePermissions.swift */; };
+		OBJ_52 /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* FileType.swift */; };
+		OBJ_53 /* ReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ReadWrite.swift */; };
+		OBJ_54 /* SFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* SFTP.swift */; };
+		OBJ_55 /* SSH.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* SSH.swift */; };
+		OBJ_56 /* SSHAuthMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* SSHAuthMethod.swift */; };
+		OBJ_57 /* SSHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* SSHError.swift */; };
+		OBJ_58 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Session.swift */; };
+		OBJ_68 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_79 /* SFTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* SFTPTests.swift */; };
+		OBJ_80 /* SSHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* SSHTests.swift */; };
+		OBJ_81 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* XCTestManifests.swift */; };
+		OBJ_83 /* Shout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Shout::Shout::Product" /* Shout.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7DD7CFC26179FBB00B07B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Shout::Shout";
+			remoteInfo = Shout;
+		};
+		C7DD7D0026179FBC00B07B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Shout::ShoutTests";
+			remoteInfo = ShoutTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C747242D2617B2BB00E1BA4A /* libssh2_publickey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libssh2_publickey.h; path = Sources/CSSH/libssh2/libssh2_publickey.h; sourceTree = "<group>"; };
+		C747242E2617B2BB00E1BA4A /* libssh2_sftp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libssh2_sftp.h; path = Sources/CSSH/libssh2/libssh2_sftp.h; sourceTree = "<group>"; };
+		C747242F2617B2BB00E1BA4A /* libssh2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libssh2.h; path = Sources/CSSH/libssh2/libssh2.h; sourceTree = "<group>"; };
+		C74724392617B40900E1BA4A /* Shout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shout-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7DD7D0F2617A1EF00B07B31 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		OBJ_10 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		OBJ_11 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssh2.a; sourceTree = "<group>"; };
+		OBJ_12 /* CSSH.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = CSSH.modulemap; sourceTree = "<group>"; };
+		OBJ_14 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		OBJ_16 /* FileAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAttributes.swift; sourceTree = "<group>"; };
+		OBJ_17 /* FilePermissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePermissions.swift; sourceTree = "<group>"; };
+		OBJ_18 /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
+		OBJ_19 /* ReadWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWrite.swift; sourceTree = "<group>"; };
+		OBJ_20 /* SFTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTP.swift; sourceTree = "<group>"; };
+		OBJ_21 /* SSH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSH.swift; sourceTree = "<group>"; };
+		OBJ_22 /* SSHAuthMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHAuthMethod.swift; sourceTree = "<group>"; };
+		OBJ_23 /* SSHError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHError.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		OBJ_27 /* SFTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTPTests.swift; sourceTree = "<group>"; };
+		OBJ_28 /* SSHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHTests.swift; sourceTree = "<group>"; };
+		OBJ_29 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		OBJ_34 /* SocketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
+		OBJ_35 /* SocketUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/alin/Projects/Lunar/Frameworks/Shout/.build/checkouts/BlueSocket/Package.swift; sourceTree = "<group>"; };
+		OBJ_41 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_42 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		"Shout::Shout::Product" /* Shout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Shout::ShoutTests::Product" /* ShoutTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				C7DD7D102617A1EF00B07B31 /* libz.tbd in Frameworks */,
+				C7DD7D062617A1C400B07B31 /* libcrypto.a in Frameworks */,
+				C7DD7D072617A1C400B07B31 /* libssh2.a in Frameworks */,
+				C723C5812617B9440033565F /* Socket in Frameworks */,
+				C7DD7D082617A1C400B07B31 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_83 /* Shout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7DD7D052617A1C400B07B31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7DD7D0F2617A1EF00B07B31 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* Shout */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* Agent.swift */,
+				OBJ_15 /* Channel.swift */,
+				OBJ_16 /* FileAttributes.swift */,
+				OBJ_17 /* FilePermissions.swift */,
+				OBJ_18 /* FileType.swift */,
+				OBJ_19 /* ReadWrite.swift */,
+				OBJ_20 /* SFTP.swift */,
+				OBJ_21 /* SSH.swift */,
+				OBJ_22 /* SSHAuthMethod.swift */,
+				OBJ_23 /* SSHError.swift */,
+				OBJ_24 /* Session.swift */,
+				C74724392617B40900E1BA4A /* Shout-Bridging-Header.h */,
+			);
+			name = Shout;
+			path = Sources/Shout;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_25 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* ShoutTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_26 /* ShoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* SFTPTests.swift */,
+				OBJ_28 /* SSHTests.swift */,
+				OBJ_29 /* XCTestManifests.swift */,
+			);
+			name = ShoutTests;
+			path = Tests/ShoutTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_30 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_31 /* Socket 1.0.52 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Socket 1.0.52 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Socket */,
+				OBJ_36 /* Package.swift */,
+			);
+			name = "Socket 1.0.52";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_32 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Socket.swift */,
+				OBJ_34 /* SocketProtocols.swift */,
+				OBJ_35 /* SocketUtils.swift */,
+			);
+			name = Socket;
+			path = .build/checkouts/BlueSocket/Sources/Socket;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Shout::Shout::Product" /* Shout.framework */,
+				"Shout::ShoutTests::Product" /* ShoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				C747242D2617B2BB00E1BA4A /* libssh2_publickey.h */,
+				C747242E2617B2BB00E1BA4A /* libssh2_sftp.h */,
+				C747242F2617B2BB00E1BA4A /* libssh2.h */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_25 /* Tests */,
+				OBJ_30 /* Dependencies */,
+				OBJ_37 /* Products */,
+				OBJ_41 /* LICENSE */,
+				OBJ_42 /* README.md */,
+				C7DD7D052617A1C400B07B31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* CSSH */,
+				OBJ_13 /* Shout */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* CSSH */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* libcrypto.a */,
+				OBJ_10 /* libssl.a */,
+				OBJ_11 /* libssh2.a */,
+				OBJ_12 /* CSSH.modulemap */,
+			);
+			name = CSSH;
+			path = Sources/CSSH;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C747242C2617B29200E1BA4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74724302617B2BB00E1BA4A /* libssh2_publickey.h in Headers */,
+				C74724312617B2BB00E1BA4A /* libssh2_sftp.h in Headers */,
+				C74724322617B2BB00E1BA4A /* libssh2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		"Shout::Shout" /* Shout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_44 /* Build configuration list for PBXNativeTarget "Shout" */;
+			buildPhases = (
+				C747242C2617B29200E1BA4A /* Headers */,
+				OBJ_47 /* Sources */,
+				OBJ_59 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shout;
+			packageProductDependencies = (
+				C723C5802617B9440033565F /* Socket */,
+			);
+			productName = Shout;
+			productReference = "Shout::Shout::Product" /* Shout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Shout::ShoutTests" /* ShoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_75 /* Build configuration list for PBXNativeTarget "ShoutTests" */;
+			buildPhases = (
+				OBJ_78 /* Sources */,
+				OBJ_82 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_85 /* PBXTargetDependency */,
+			);
+			name = ShoutTests;
+			productName = ShoutTests;
+			productReference = "Shout::ShoutTests::Product" /* ShoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Shout::SwiftPMPackageDescription" /* ShoutPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_64 /* Build configuration list for PBXNativeTarget "ShoutPackageDescription" */;
+			buildPhases = (
+				OBJ_67 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShoutPackageDescription;
+			productName = ShoutPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Shout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			packageReferences = (
+				C723C57F2617B9440033565F /* XCRemoteSwiftPackageReference "BlueSocket" */,
+			);
+			productRefGroup = OBJ_37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Shout::Shout" /* Shout */,
+				"Shout::SwiftPMPackageDescription" /* ShoutPackageDescription */,
+				"Shout::ShoutPackageTests::ProductTarget" /* ShoutPackageTests */,
+				"Shout::ShoutTests" /* ShoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_48 /* Agent.swift in Sources */,
+				OBJ_49 /* Channel.swift in Sources */,
+				OBJ_50 /* FileAttributes.swift in Sources */,
+				OBJ_51 /* FilePermissions.swift in Sources */,
+				OBJ_52 /* FileType.swift in Sources */,
+				OBJ_53 /* ReadWrite.swift in Sources */,
+				OBJ_54 /* SFTP.swift in Sources */,
+				OBJ_55 /* SSH.swift in Sources */,
+				OBJ_56 /* SSHAuthMethod.swift in Sources */,
+				OBJ_57 /* SSHError.swift in Sources */,
+				OBJ_58 /* Session.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_68 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_79 /* SFTPTests.swift in Sources */,
+				OBJ_80 /* SSHTests.swift in Sources */,
+				OBJ_81 /* XCTestManifests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Shout::ShoutTests" /* ShoutTests */;
+			targetProxy = C7DD7D0026179FBC00B07B31 /* PBXContainerItemProxy */;
+		};
+		OBJ_85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Shout::Shout" /* Shout */;
+			targetProxy = C7DD7CFC26179FBB00B07B31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/CSSH/libssh2",
+				);
+				INFOPLIST_FILE = Shout.xcodeproj/Shout_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/CSSH",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = Sources/CSSH/CSSH.modulemap;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Shout;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Shout/Shout-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Shout;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/CSSH/libssh2",
+				);
+				INFOPLIST_FILE = Shout.xcodeproj/Shout_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources/CSSH",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = Sources/CSSH/CSSH.modulemap;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Shout;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Shout/Shout-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Shout;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/CSSH",
+				);
+				INFOPLIST_FILE = Shout.xcodeproj/ShoutTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ShoutTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Sources/CSSH",
+				);
+				INFOPLIST_FILE = Shout.xcodeproj/ShoutTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ShoutTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "Shout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_44 /* Build configuration list for PBXNativeTarget "Shout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_45 /* Debug */,
+				OBJ_46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_64 /* Build configuration list for PBXNativeTarget "ShoutPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_65 /* Debug */,
+				OBJ_66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_70 /* Build configuration list for PBXAggregateTarget "ShoutPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_71 /* Debug */,
+				OBJ_72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_75 /* Build configuration list for PBXNativeTarget "ShoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_76 /* Debug */,
+				OBJ_77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C723C57F2617B9440033565F /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IBM-Swift/BlueSocket";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.200;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C723C5802617B9440033565F /* Socket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C723C57F2617B9440033565F /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			productName = Socket;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

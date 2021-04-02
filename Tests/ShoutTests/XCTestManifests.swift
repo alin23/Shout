@@ -7,7 +7,7 @@ extension SFTPTests {
         ("testRemove", testRemove),
         ("testRename", testRename),
         ("testRemoveDirectory", testRemoveDirectory),
-        ("testCreateDirectory", testCreateDirectory)
+        ("testCreateDirectory", testCreateDirectory),
     ]
 }
 
@@ -20,10 +20,10 @@ extension ShoutTests {
 }
 
 #if !os(macOS)
-public func __allTests() -> [XCTestCaseEntry] {
-    return [
-        testCase(SFTPTests.__allTests),
-        testCase(ShoutTests.__allTests),
-    ]
-}
+    public func __allTests() -> [XCTestCaseEntry] {
+        [
+            testCase(SFTPTests.__allTests),
+            testCase(ShoutTests.__allTests),
+        ]
+    }
 #endif

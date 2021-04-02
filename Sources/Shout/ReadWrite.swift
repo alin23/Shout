@@ -5,18 +5,17 @@
 //  Created by Jake Heiser on 3/15/19.
 //
 
-import CSSH
+// import CSSH
 import struct Foundation.Data
 
 enum ReadWriteProcessor {
-    
     enum ReadResult {
         case data(Data)
         case eagain
         case done
         case error(SSHError)
     }
-    
+
     static func processRead(result: Int, buffer: inout [Int8], session: OpaquePointer) -> ReadResult {
         if result > 0 {
             let data = Data(bytes: &buffer, count: result)
@@ -29,13 +28,13 @@ enum ReadWriteProcessor {
             return .error(SSHError.codeError(code: Int32(result), session: session))
         }
     }
-    
+
     enum WriteResult {
         case written(Int)
         case eagain
         case error(SSHError)
     }
-    
+
     static func processWrite(result: Int, session: OpaquePointer) -> WriteResult {
         if result >= 0 {
             return .written(result)
@@ -45,5 +44,4 @@ enum ReadWriteProcessor {
             return .error(SSHError.codeError(code: Int32(result), session: session))
         }
     }
-    
 }
