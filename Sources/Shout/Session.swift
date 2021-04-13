@@ -10,7 +10,7 @@ import Foundation
 import Socket
 
 /// Direct bindings to libssh2_session
-class Session {
+public class Session {
     private static let initResult = libssh2_init(0)
 
     private let cSession: OpaquePointer

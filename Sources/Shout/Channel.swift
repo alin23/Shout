@@ -10,7 +10,10 @@ import struct Foundation.Data
 import struct Foundation.URL
 
 /// Direct bindings to libssh2_channel
-class Channel {
+public class Channel {
+    public var cancelled = false
+    public var session: Session?
+
     private static let session = "session"
     private static let exec = "exec"
 
@@ -44,6 +47,14 @@ class Channel {
     private init(cSession: OpaquePointer, cChannel: OpaquePointer) {
         self.cSession = cSession
         self.cChannel = cChannel
+    }
+
+    public func cancel() throws {
+        cancelled = true
+        _ = write(data: Data([3]), length: 1)
+        try sendEOF()
+        try close()
+        try waitClosed()
     }
 
     func requestPty(type: String) throws {
@@ -110,5 +121,6 @@ class Channel {
 
     deinit {
         libssh2_channel_free(cChannel)
+        session = nil
     }
 }

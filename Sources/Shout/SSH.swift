@@ -10,6 +10,9 @@ import Socket
 
 /// Manages an SSH session
 public class SSH {
+    public let host: String
+    public let port: Int32
+
     public enum PtyType: String {
         case vanilla
         case vt100
@@ -46,6 +49,9 @@ public class SSH {
     ///   - port: the port to connect to; default 22
     /// - Throws: SSHError if the SSH session couldn't be created
     public init(host: String, port: Int32 = 22) throws {
+        self.host = host
+        self.port = port
+
         sock = try Socket.create()
         session = try Session()
 
@@ -132,17 +138,22 @@ public class SSH {
     ///   - output: block handler called every time a chunk of command output is received
     /// - Returns: exit code of the command
     /// - Throws: SSHError if the command couldn't be executed
-    public func execute(_ command: String, output: (_ output: String) -> Void) throws -> Int32 {
+    public func execute(_ command: String, onChannelOpened: ((Channel) -> Void)? = nil, output: (_ output: String) -> Void) throws -> Int32 {
         let channel = try session.openCommandChannel()
 
         if let ptyType = ptyType {
             try channel.requestPty(type: ptyType.rawValue)
         }
 
+        if let callback = onChannelOpened {
+            channel.session = session
+            callback(channel)
+        }
+
         try channel.exec(command: command)
 
         var dataLeft = true
-        while dataLeft {
+        while dataLeft, !channel.cancelled {
             switch channel.readData() {
             case let .data(data):
                 guard let str = String(data: data, encoding: .utf8) else {
@@ -158,7 +169,9 @@ public class SSH {
             }
         }
 
-        try channel.close()
+        if !channel.cancelled {
+            try channel.close()
+        }
 
         return channel.exitStatus()
     }
