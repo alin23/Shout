@@ -21,7 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		C723C5812617B9440033565F /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = C723C5802617B9440033565F /* Socket */; };
+		C7452BA02637020F0050BE7D /* shim.h in Headers */ = {isa = PBXBuildFile; fileRef = C7452B9F2637020F0050BE7D /* shim.h */; };
+		C7452BA9263702210050BE7D /* libssh2_sftp.h in Headers */ = {isa = PBXBuildFile; fileRef = C7452BA6263702210050BE7D /* libssh2_sftp.h */; };
+		C7452BAA263702210050BE7D /* libssh2.h in Headers */ = {isa = PBXBuildFile; fileRef = C7452BA7263702210050BE7D /* libssh2.h */; };
+		C7452BAB263702210050BE7D /* libssh2_publickey.h in Headers */ = {isa = PBXBuildFile; fileRef = C7452BA8263702210050BE7D /* libssh2_publickey.h */; };
+		C745CDE42636FE8000E119EB /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = C745CDE32636FE8000E119EB /* Socket */; };
 		C74724302617B2BB00E1BA4A /* libssh2_publickey.h in Headers */ = {isa = PBXBuildFile; fileRef = C747242D2617B2BB00E1BA4A /* libssh2_publickey.h */; };
 		C74724312617B2BB00E1BA4A /* libssh2_sftp.h in Headers */ = {isa = PBXBuildFile; fileRef = C747242E2617B2BB00E1BA4A /* libssh2_sftp.h */; };
 		C74724322617B2BB00E1BA4A /* libssh2.h in Headers */ = {isa = PBXBuildFile; fileRef = C747242F2617B2BB00E1BA4A /* libssh2.h */; };
@@ -65,6 +69,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7452B9A263701C90050BE7D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C7452B9F2637020F0050BE7D /* shim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shim.h; sourceTree = "<group>"; };
+		C7452BA6263702210050BE7D /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_sftp.h; sourceTree = "<group>"; };
+		C7452BA7263702210050BE7D /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2.h; sourceTree = "<group>"; };
+		C7452BA8263702210050BE7D /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_publickey.h; sourceTree = "<group>"; };
 		C747242D2617B2BB00E1BA4A /* libssh2_publickey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libssh2_publickey.h; path = Sources/CSSH/libssh2/libssh2_publickey.h; sourceTree = "<group>"; };
 		C747242E2617B2BB00E1BA4A /* libssh2_sftp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libssh2_sftp.h; path = Sources/CSSH/libssh2/libssh2_sftp.h; sourceTree = "<group>"; };
 		C747242F2617B2BB00E1BA4A /* libssh2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libssh2.h; path = Sources/CSSH/libssh2/libssh2.h; sourceTree = "<group>"; };
@@ -72,7 +81,6 @@
 		C7DD7D0F2617A1EF00B07B31 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		OBJ_10 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		OBJ_11 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssh2.a; sourceTree = "<group>"; };
-		OBJ_12 /* CSSH.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = CSSH.modulemap; sourceTree = "<group>"; };
 		OBJ_14 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		OBJ_16 /* FileAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAttributes.swift; sourceTree = "<group>"; };
@@ -104,10 +112,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				C745CDE42636FE8000E119EB /* Socket in Frameworks */,
 				C7DD7D102617A1EF00B07B31 /* libz.tbd in Frameworks */,
 				C7DD7D062617A1C400B07B31 /* libcrypto.a in Frameworks */,
 				C7DD7D072617A1C400B07B31 /* libssh2.a in Frameworks */,
-				C723C5812617B9440033565F /* Socket in Frameworks */,
 				C7DD7D082617A1C400B07B31 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +131,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7452BA5263702210050BE7D /* libssh2 */ = {
+			isa = PBXGroup;
+			children = (
+				C7452BA6263702210050BE7D /* libssh2_sftp.h */,
+				C7452BA7263702210050BE7D /* libssh2.h */,
+				C7452BA8263702210050BE7D /* libssh2_publickey.h */,
+			);
+			path = libssh2;
+			sourceTree = "<group>";
+		};
 		C7DD7D052617A1C400B07B31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,10 +254,12 @@
 		OBJ_8 /* CSSH */ = {
 			isa = PBXGroup;
 			children = (
+				C7452BA5263702210050BE7D /* libssh2 */,
+				C7452B9F2637020F0050BE7D /* shim.h */,
+				C7452B9A263701C90050BE7D /* module.modulemap */,
 				OBJ_9 /* libcrypto.a */,
 				OBJ_10 /* libssl.a */,
 				OBJ_11 /* libssh2.a */,
-				OBJ_12 /* CSSH.modulemap */,
 			);
 			name = CSSH;
 			path = Sources/CSSH;
@@ -253,6 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74724302617B2BB00E1BA4A /* libssh2_publickey.h in Headers */,
+				C7452BA02637020F0050BE7D /* shim.h in Headers */,
+				C7452BAA263702210050BE7D /* libssh2.h in Headers */,
+				C7452BAB263702210050BE7D /* libssh2_publickey.h in Headers */,
+				C7452BA9263702210050BE7D /* libssh2_sftp.h in Headers */,
 				C74724312617B2BB00E1BA4A /* libssh2_sftp.h in Headers */,
 				C74724322617B2BB00E1BA4A /* libssh2.h in Headers */,
 			);
@@ -275,7 +299,7 @@
 			);
 			name = Shout;
 			packageProductDependencies = (
-				C723C5802617B9440033565F /* Socket */,
+				C745CDE32636FE8000E119EB /* Socket */,
 			);
 			productName = Shout;
 			productReference = "Shout::Shout::Product" /* Shout.framework */;
@@ -322,7 +346,7 @@
 				LastUpgradeCheck = 9999;
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Shout" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -330,7 +354,7 @@
 			);
 			mainGroup = OBJ_5;
 			packageReferences = (
-				C723C57F2617B9440033565F /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				C745CDE22636FE8000E119EB /* XCRemoteSwiftPackageReference "BlueSocket" */,
 			);
 			productRefGroup = OBJ_37 /* Products */;
 			projectDirPath = "";
@@ -420,6 +444,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
@@ -445,6 +470,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -682,9 +708,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C723C57F2617B9440033565F /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
+		C745CDE22636FE8000E119EB /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/IBM-Swift/BlueSocket";
+			repositoryURL = "https://github.com/Kitura/BlueSocket";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.200;
@@ -693,9 +719,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C723C5802617B9440033565F /* Socket */ = {
+		C745CDE32636FE8000E119EB /* Socket */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C723C57F2617B9440033565F /* XCRemoteSwiftPackageReference "BlueSocket" */;
+			package = C745CDE22636FE8000E119EB /* XCRemoteSwiftPackageReference "BlueSocket" */;
 			productName = Socket;
 		};
 /* End XCSwiftPackageProductDependency section */

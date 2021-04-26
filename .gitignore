@@ -2,3 +2,5 @@
 /.build
 /Packages
 .swiftpm
+build/
+*.xcuserdatad/
